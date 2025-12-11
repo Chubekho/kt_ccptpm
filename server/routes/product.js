@@ -46,6 +46,7 @@ router.post("/", async (req, res) => {
     description: req.body.description,
     price: req.body.price,
     quantity: req.body.quantity,
+    image: req.body.image,
   });
 
   try {
@@ -68,6 +69,11 @@ router.put("/:id", async (req, res) => {
     product.description = req.body.description || product.description;
     product.price = req.body.price || product.price;
     product.quantity = req.body.quantity || product.quantity;
+
+    // <-- Đã thêm cập nhật trường image
+    if (req.body.image !== undefined) {
+      product.image = req.body.image;
+    }
 
     const updatedProduct = await product.save();
     res.status(200).json(updatedProduct);
