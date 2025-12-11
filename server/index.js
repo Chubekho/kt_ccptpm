@@ -7,6 +7,8 @@ import dotenv from "dotenv";
 import logger from "./middlewares/logger.js";
 
 //routes
+import productRoutes from "./routes/product.js";
+import userRoutes from "./routes/user.js";
 
 // Chạy config cho dotenv (để load file .env)
 dotenv.config();
@@ -20,6 +22,13 @@ app.use(express.urlencoded({ extended: true }));
 
 //logger middleware
 app.use(logger);
+
+// Product routes
+app.use("/api/product", productRoutes);
+// User routes
+app.use("/api/user", userRoutes);
+
+
 
 // === Kết nối MongoDB ===
 mongoose
