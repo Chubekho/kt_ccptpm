@@ -1,0 +1,41 @@
+# Dependencies
+node_modules
+# Bỏ qua node_modules ở cả 2 dự án con
+/client/node_modules
+/server/node_modules
+
+# Build Artifacts
+# Bỏ qua thư mục build của Vite
+/client/dist
+/client/dist-ssr
+
+#Bỏ qua thư mục ở server
+server/.env
+
+# Environment Variables
+# Bỏ qua tất cả các file .env và .local
+.env
+.env.*
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# OS & Editor Files
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+client_secret_698296523903-m5c1llg7csth6qg5e6l8rk84tkcfd29v.apps.googleusercontent.com.json
