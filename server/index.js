@@ -2,6 +2,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import cors from "cors";
 
 // middlewares
 import logger from "./middlewares/logger.js";
@@ -18,6 +19,7 @@ const app = express();
 
 // 2. Body Parser
 app.use(express.json());
+app.use(cors());
 app.use(express.urlencoded({ extended: true }));
 
 //logger middleware
