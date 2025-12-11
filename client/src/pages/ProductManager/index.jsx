@@ -3,7 +3,8 @@ import ProductList from './components/ProductList';
 import ProductForm from './components/ProductForm';
 import styles from './ProductManager.module.scss'; // Import SCSS module
 
-const API_URL = 'http://localhost:8082/api/product'; // Đảm bảo bạn đã config proxy trong vite.config.js hoặc dùng http://localhost:PORT/api/product
+
+const API_URL = 'http://localhost:8086/api/product'; // Đảm bảo bạn đã config proxy trong vite.config.js hoặc dùng http://localhost:PORT/api/product
 
 const ProductManager = () => {
   const [products, setProducts] = useState([]);
